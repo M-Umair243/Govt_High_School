@@ -1,0 +1,207 @@
+.Hero_section_2 {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-family: Poppins;
+}
+.box {
+  flex: 0 0 auto;
+  max-width: 33.33%;
+  width: 380px;
+  height: 400px;
+  /* margin-inline: 10px; */
+  background-color: #f3f3f3;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.header {
+  height: 50px;
+  background: #00aed9;
+  margin: 10px 5px 0 20px;
+  display: flex;
+  align-items: center;
+}
+.header_text {
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+.box_body {
+  margin: 10px 10px 10px 20px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.box_news {
+  position: relative;
+}
+.box_news::after {
+  position: absolute;
+  content: "new";
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: "Courier New", Courier, monospace;
+}
+.box_body .list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.box_body .list .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40px;
+  width: 50px;
+  background: #00aed9;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: Roboto;
+  color: #fff;
+}
+.Notice_li {
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins;
+  font-size: 16px;
+}
+.notice_icon {
+  font-size: 18px;
+}
+.box .info {
+  gap: 20px;
+}
+.box .info .info_li {
+  gap: 20px;
+  position: relative;
+}
+.info_li::after,
+.Founder_li::after {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  content: "";
+  background: rgb(207, 203, 203);
+  height: 1px;
+
+  width: 100%;
+}
+.Founder_li {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  position: relative;
+}
+.Founder_li img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+.Founder_li .Founder_text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.Founder_li .Founder_text .Name {
+  margin-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 700;
+}
+.Founder_li .Founder_text .school_name {
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.box_body .Certificate_li {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+}
+.box_body .Certificate_li .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/Hero_Section/certificate.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: all 1.1s;
+}
+.box_body .Certificate_li:hover .bg {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1440px) {
+  .box {
+    flex: 0 0 auto;
+    max-width: 33.33%;
+    min-width: 425px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .box {
+    flex: 0 0 auto;
+    max-width: 33.33%;
+    min-width: 445px;
+    height: 400px;
+    /* margin-inline: 10px; */
+    background-color: #f3f3f3;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .box {
+    flex: 0 0 auto;
+    max-width: 25%;
+    min-width: 319px;
+  }
+  .box_body .Certificate_li {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header_text {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .box_news,
+  .box_body .list,
+  .Notice_li {
+    font-size: 14px;
+  }
+  .box {
+    max-width: 100%;
+    min-width: 100px;
+  }
+  .box_body .Certificate_li {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .Founder_li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
